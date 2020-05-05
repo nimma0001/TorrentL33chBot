@@ -54,19 +54,19 @@ if __name__ == "__main__" :
     #
     incoming_message_handler = MessageHandler(
         incoming_message_f,
-        filters=Filters.command(["leech@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["leech@EddieRobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_message_handler)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
-        filters=Filters.command(["purge@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["purge"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_purge_message_handler)
     #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
-        filters=Filters.command(["ytdl@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["ytdl@EddieRobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_dl_handler)
     #
@@ -96,7 +96,7 @@ if __name__ == "__main__" :
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=Filters.command(["upload@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["upload@EddieRobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(upload_document_handler)
 
@@ -125,13 +125,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["savethumbnail@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["savethumbnail@EddieRobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["clearthumbnail@Uploaderzbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["clearthumbnail@EddieRobot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
