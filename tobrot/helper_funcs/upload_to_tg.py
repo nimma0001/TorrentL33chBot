@@ -180,15 +180,11 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             # send video
             if edit_media and message.photo:
                 sent_message = await message.edit_media(
-                    media=InputMediaVideo(
+                    media=InputMediaDocument(
                         media=local_file_name,
                         thumb=thumb,
                         caption=caption_str,
                         parse_mode="html",
-                        width=width,
-                        height=height,
-                        duration=duration,
-                        supports_streaming=True
                     )
                     # quote=True,
                 )
@@ -198,11 +194,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     # quote=True,
                     caption=caption_str,
                     parse_mode="html",
-                    duration=duration,
-                    width=width,
-                    height=height,
                     thumb=thumb,
-                    supports_streaming=True,
                     disable_notification=True,
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
